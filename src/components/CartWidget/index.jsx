@@ -1,11 +1,20 @@
-import styles from "./main.module.scss"
+import { useCartContext } from '../CartContext'
+import '../scss/main.scss'
+
+
 
 const CartWidget = () => {
+
+  const { totalProducts } = useCartContext();
+
   return (
-    <div className="cart">
-      <p>0</p>
+    <>
+      <div className="shop">
+        <span className='number'> {totalProducts() || ''} </span>
       </div>
+    </>
   )
+
 }
 
-export default CartWidget
+export default CartWidget;
