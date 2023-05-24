@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import '../scss/main.scss'
 
 
 
@@ -17,7 +16,6 @@ const itemCount = ({ initial, stock, onAdd }) => {
       setCount(parseInt(initial));
     }, [initial])
     
-     
 
   return (
 

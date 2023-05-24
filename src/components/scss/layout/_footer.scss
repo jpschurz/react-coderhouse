@@ -1,0 +1,51 @@
+footer{
+    background-color: nth($colors, 1);
+
+    p{
+        color: nth($colors, 3);
+        font-weight: bold;
+    }
+
+    .menu-footer-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .logo-footer{
+
+            .img-logo-menu-footer{
+                width: 60px;
+                height: 60px;
+            }
+
+        }
+    
+        .menu-footer{
+            display: flex;
+            align-items: center;
+            
+                a{
+    
+                &:hover {
+                    text-decoration: underline !important;
+                }
+            
+                &:active {
+                    border-radius: 3px;
+                }
+            }
+        }
+    
+        .img-logo-redes{
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+        }
+    
+        .icon-redes-footer{    
+            display: flex;
+        }
+    }
+
+}

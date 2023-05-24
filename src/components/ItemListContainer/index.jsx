@@ -1,9 +1,9 @@
 import ItemList from '../ItemList'
 import db from '../../../db/firebase-config'
+import { Spinner } from "react-bootstrap";
 import { useEffect, useState } from 'react'
-import { Col, Container, Row, Spinner } from "react-bootstrap";
-import { NavLink } from 'react-router-dom'
-import { getDocs, collection } from 'firebase/firestore'
+import { NavLink, useParams } from 'react-router-dom'
+import { getDocs, collection, query, where } from 'firebase/firestore'
 import '../scss/main.scss'
 
 
@@ -15,8 +15,8 @@ const [categorias, setCategorias] = useState([])
 const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('')
 const [productosFiltrados, setProductosFiltrados] = useState(productos)
 const [loading, setLoading] = useState(true)
-
-const itemRef = collection(db, "products")
+const {id} = useParams()
+const itemRef = id ? query(collection(db, "productos"), where('category', '==', id)):collection(db, "productos")
 
 const getItems = async () => {
   const productsCollection= await getDocs(itemRef)
@@ -25,11 +25,12 @@ const getItems = async () => {
     id: doc.id
   }));
   setProductos(items)
-  setLoading(false)
   const categoriasUnicas = [
     ...new Set(items.map((producto) => producto.category)),
   ];
   setCategorias(categoriasUnicas);
+  setLoading(false)
+ 
 }
 useEffect(() => {
   getItems()
@@ -44,14 +45,13 @@ useEffect(() => {
       (producto) => producto.category === categoriaSeleccionada) : productos;
     setProductosFiltrados(productosFiltrados);
 }, [categoriaSeleccionada, productos]);
-    
+
 if (loading) {
   return (
     <section className="sectionSpinner">
       <div className="spinner">
-        <Spinner animation="grow" size="sm" />
-        <Spinner animation="grow" />
-        <Spinner animation="grow" size="sm" />
+          <Spinner animation="" size="sm" />
+          <span class="sr-only">Loading...</span>          
       </div>
     </section>
   )
@@ -59,8 +59,8 @@ if (loading) {
 
   return (
   <> 
-  <div className="categorias-btn">
-  <div><h4>Categorias</h4></div>
+  <div className="sectionCategorias">
+  <div><h2 >Categorias</h2></div>
   <div>
     {categorias.map((categoria) => (
       <NavLink key={categoria} to={`/products/category/${categoria}`} 
@@ -72,11 +72,11 @@ if (loading) {
   </div>
   
     
-        <div className="card-container">
-          {productosFiltrados.map((producto) => (
-            <ItemList key={producto.id} producto={ producto } />
-          ))}
-        </div>
+  <div className="card-container">
+    {productosFiltrados.map((producto) => (
+      <ItemList key={producto.id} producto={ producto } />
+    ))}
+  </div>
   </>
   );
 };

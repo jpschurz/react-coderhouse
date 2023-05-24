@@ -1,0 +1,92 @@
+$colors:
+black,
+rebeccapurple,
+darkred,
+white,
+#3837346b,
+#7f7f7f57,
+#ffffff00,
+#00000028,
+firebrick;
+
+
+body{
+    background-color: nth($colors, 1);
+
+    a{
+        color: nth($colors, 2) !important;
+    }
+
+    p{
+        color: nth($colors, 4);
+    }
+
+    hr{
+        border-color: nth($colors, 3) !important;
+    }
+    
+    h1{
+        color: nth($colors, 2) !important;
+    }
+    
+    h2{
+        color: nth($colors, 2) !important;
+    }
+    
+    h3{
+        color: nth($colors, 4) !important;
+    }
+
+    h4{
+        color: nth($colors, 4) !important;
+    }
+
+}
+
+
+//Colores Header
+
+.menu-header{
+    background-color: nth($colors, 5);
+
+    a{
+    
+        &:hover{
+            color:nth($colors, 3) !important;
+        }
+    
+        &:active {
+            background-color: nth($colors, 5);
+            border: nth($colors, 5) solid 2px;
+            color: nth($colors, 4);
+        }
+    }
+}
+
+
+//Colores Footer
+
+.menu-footer{
+
+    a{
+    
+        &:hover{
+            color:nth($colors, 3) !important;
+        }
+
+        &:active {
+            background-color: nth($colors, 5);
+            border: nth($colors, 5) solid 2px;
+            color: nth($colors, 4);
+        }
+    }
+}
+
+
+//Colores Login
+
+.user-login{
+    color: nth($colors, 2) !important;
+}
+
+

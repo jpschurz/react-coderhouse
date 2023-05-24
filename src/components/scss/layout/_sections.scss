@@ -1,0 +1,363 @@
+/*Body*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body{
+        background-color: #1a212a;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+        
+        a{
+            text-decoration: none !important;
+        }
+    }
+}
+
+
+
+/*Register*/
+
+.resumen{
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    height: 100%;
+   
+}
+
+.singIn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    height: 400px;
+    width: 300px;
+    border: 1px solid #0d1b2a;
+}
+.handleSingIn{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin: 10px;
+}
+.btnSingIn{
+    color: rgba(0, 0, 0, 0.692);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.692);;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #471004;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.email{    
+    flex: 1 0 130px;
+}
+.contraseña{
+    flex: 1 0 130px;
+}
+
+.form-btn{
+    flex: 1 0 40px;
+}
+
+/*Item list*/
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  } 
+  .row{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .productoCard{
+      text-align: center;
+      margin: 40px;
+      box-shadow: 0 0 30px #0406478f;
+      width: 350px;
+    
+    }
+    .productoImg{
+      margin-top: 20px;
+      height: 300px;
+      width: auto;
+    }
+    .cardImg{
+      max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    
+    }
+    .card-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  
+    .link{
+      text-decoration: none;
+    }
+
+    .card-text{
+        color: red;
+    }
+
+    .shop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    color:darkmagenta;
+    margin: 20px 20px;
+    
+}
+
+
+/*img{
+    height: 200px;
+    width: 100px;    
+} */
+
+.number{
+    color:darkmagenta;
+    margin-top: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/*Cart*/ 
+
+.cart-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: center;
+    color: #1b263b;
+}
+
+.checkOutForm{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+
+.form{
+    border: 1px solid #071e49;
+    border-radius: 5px;
+    background-color: #2b509483;
+    height: auto;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+
+.emptyContainer{
+    height: 1000px;
+}
+.emptyCart{
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+.buyOrder{
+    width: auto;
+    height: 150px;
+    align-items: flex-end;
+}
+
+/*Itemcart*/
+
+.itemCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+
+    img{        
+        height: 150px;
+        width: 150px; 
+    }
+ 
+}
+
+/*itemdetailcontainer*/
+
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardProductDetail{
+    width: 450px;
+    margin: 10px;
+}
+.product{
+    margin: 10px;
+}
+.contador{
+    margin: 20px;
+    padding:20px;
+}
+
+.cardImgDetail{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sectionCategorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h2{
+        margin-top: 10px;
+    }
+}
+
+
+.category-btn{
+    margin: 5px;
+    color: rgba(0, 0, 0, 0.692);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.692);;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: darkred;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+}
+
+.sectionSpinner{
+    height: 900px;
+}
+
+
+/*itemcounter*/
+
+.counter{
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    text-align: center ;
+    color: #0d1b2a;
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    border-radius: 4px;
+    
+}
+
+.btn-count{
+    margin: 5px;
+    color: #0d1b2a;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #1105b8;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+/*HOME*/
+
+.img-carousel {
+    display: block;
+    width: 100%;
+    height: 700px;
+}
+
+.userLogin{
+    display: flex;
+    justify-content: center;
+    color:#415a77;
+}
+
+/*BTN*/
+
+.btn-login{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin: 10px;
+    text-decoration: none;
+}  
+a.active{
+    text-decoration: none;
+}
+a{
+   text-decoration: none;
+}
+.login {
+    color: rgba(0, 0, 0, 0.692);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.692);;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: darkred;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.login:hover {
+    background-color: #f09116;
+}
+.login:focus,
+.login:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*alert*/
+
+.alert{
+    align-items: center;
+    border: 0.5px solid darkred;
+    background-color: rgba(255, 0, 0, 0.39);
+    
+}

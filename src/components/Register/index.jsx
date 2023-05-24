@@ -1,5 +1,5 @@
 import Alert  from '../Alert'
-import Btn from '../Btn'
+import LoginButton from '../LoginButton'
 import Form from 'react-bootstrap/Form'
 import { toast } from 'react-toastify'
 import { useAuth } from '../AuthContext'
@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
-import '../scss/main.scss'
 
 
 
@@ -66,7 +65,7 @@ export default function Register() {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
             </Form.Group>
             <div className='handleSingIn'>
-              <Btn type="submit" texto={'Regístrate'} />
+              <LoginButton type="submit" texto={'Regístrate'} />
             </div>
        </Form>
        <p className="my-4 text-sm flex justify-between px-3">

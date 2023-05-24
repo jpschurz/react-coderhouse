@@ -4,7 +4,6 @@ import { useAuth } from '../AuthContext'
 import { toast } from 'react-toastify'
 import { Button } from 'react-bootstrap'
 import 'react-toastify/dist/ReactToastify.css'
-import '../scss/main.scss'
 
 
 function Navbar() {
@@ -31,8 +30,7 @@ function Navbar() {
     };
   
     const activeStyles = {
-        color: "red",
-        filter: "drop-shadow(0 0 10px #FEC89A)"
+        color: "red"
     }
 
 
@@ -50,18 +48,21 @@ function Navbar() {
                         <p className="items">Home</p>
                     </NavLink>   
                     <NavLink to="/products" className="items" style={({ isActive }) => (isActive ? activeStyles : undefined)}>
-                        <p className="items">Products</p>
+                        <p className="items">Productos</p>
                     </NavLink>
                     <NavLink to="/cart" className="items" style={({ isActive }) => (isActive ? activeStyles : undefined)}>
-                        <p className="items">Shop</p>
+                        <p className="items">Carrito</p>
+                    </NavLink>
+                    <NavLink to="/orders" className="items" style={({ isActive }) => (isActive ? activeStyles : undefined)}>
+                        <p className="items">Pedidos</p>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to="/cart" style={({ isActive }) => (isActive ? activeStyles : undefined)}>
                         <CartWidget />
                     </NavLink>
-                    <NavLink to="/login" className="btn-logout">
-                        <Button className="btnLogout" onClick={handleLogout}> Cerrar Sesión </Button>
+                    <NavLink to="/logout" className="btn-logout">
+                        <Button className="btnLogout" onClick={handleLogout}> Logout </Button>
                     </NavLink>
                 </div>
             </nav> 

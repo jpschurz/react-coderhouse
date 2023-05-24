@@ -1,5 +1,4 @@
 import { useCartContext } from '../CartContext'
-import '../scss/main.scss'
 
 
 

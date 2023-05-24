@@ -1,8 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import '../scss/main.scss'
-
 
 
 
@@ -17,6 +15,7 @@ const itemList = ({ producto }) => {
         </div>
         <Card.Body>
           <Card.Title>{producto.title}</Card.Title>
+          <Card.Subtitle>{producto.description}</Card.Subtitle> 
           <Card.Text> $ {producto.price}</Card.Text>
         </Card.Body>
       </Card>

@@ -1,4 +1,4 @@
-import Btn from '../Btn'
+import Btn from '../LoginButton'
 import ItemCount from '../ItemCount'
 import db from '../../../db/firebase-config'
 import { Card, Spinner } from "react-bootstrap"
@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 import { Link, Navigate, NavLink, useParams } from 'react-router-dom'
 import { useCartContext } from '../CartContext/index'
 import { doc, getDoc } from 'firebase/firestore'
-import '../scss/main.scss'
 
 
 
@@ -61,9 +60,6 @@ const itemDetailContainer = () => {
   }
   return (
     <>
-    <NavLink to={`/products`} >
-        <Btn texto="Todos Los Productos"/>
-    </NavLink>
     <div className="tarjeta">
           <Card className="cardProductDetail">
         <div className="product"> 

@@ -1,4 +1,4 @@
-import Btn from '../Btn'
+import LoginButton from '../LoginButton'
 import Form from 'react-bootstrap/Form'
 import  Alert from '../Alert'
 import { useState } from 'react'
@@ -7,7 +7,6 @@ import { useAuth } from '../AuthContext'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'
-import '../scss/main.scss'
 
 
 
@@ -52,7 +51,7 @@ export default function Login() {
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
-    if (!user.email) return setError("Escribir email para restablecer contraseña");
+    if (!user.email) return setError("Escribi tu email para restablecer la contraseña");
     try {
       await resetPassword(user.email);
       setError('Te enviamos un correo. Revisa tu bandeja de entrada')
@@ -83,7 +82,7 @@ export default function Login() {
           </Form.Group>
         
         <div className='handleSingIn'>
-          <Btn type="submit" texto={"Iniciar Sesión"} />
+          <LoginButton type="submit" texto={"Iniciar Sesión"} />
           <a className=" mb-3"
             href="#!"
             onClick={handleResetPassword}>

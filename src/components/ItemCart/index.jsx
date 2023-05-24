@@ -1,6 +1,5 @@
 import { Button, Card } from 'react-bootstrap'
 import { useCartContext } from '../CartContext'
-import '../scss/main.scss'
 
 
 const itemCart = ({ producto }) => {
